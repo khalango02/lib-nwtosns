@@ -1,0 +1,24 @@
+{
+    "name": "khalango02/nwtosns",
+    "description": "send SMS by AWSSNS",
+    "keywords": ["AWS", "SNS", "package", "Composer", "NewWay"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clesley Oliveira",
+            "email": "clesley.oliveira@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Buonzz\\Template\\": "src/"
+        }
+    }
+}
