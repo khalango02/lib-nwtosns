@@ -8,6 +8,15 @@ use Exception;
 
 class AwsSnsService
 {
+    private $snsClient;
+
+    public function __construct(
+        array $config
+    ) {
+        $config['version'] = $config['version'] ?? 'latest';
+        $this->snsClient = new snSClient($config);
+    }
+    
     public function sendMessage(
         string $message,
         string $phone,
@@ -15,7 +24,7 @@ class AwsSnsService
         string $sender
     ): bool {
         try {
-            $snSclient = $this->newSnsClient();
+            $snSclient = $this->snsClient();
 
             $attribute = $this->getDefaultSmsType();
 
